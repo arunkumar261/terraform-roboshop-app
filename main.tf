@@ -55,7 +55,7 @@ resource "null_resource" "component" {
   provisioner "remote-exec" {
     inline = [ 
         "chmod +x /tmp/bootstrap.sh",
-        "sudo sh /tmp/bootstrap.sh ${var.tags.Component} ${var.environment}"  #we r passing component and env values here
+        "sudo sh /tmp/bootstrap.sh ${var.tags.Component} ${var.environment} ${var.app_version}"  #we r passing component and env values here
 
      ]
   }
